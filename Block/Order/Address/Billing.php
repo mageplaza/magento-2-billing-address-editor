@@ -250,7 +250,7 @@ class Billing extends Data
      */
     public function getCountriesWithOptionalZip()
     {
-        return $this->directoryHelperData->getCountriesWithOptionalZip();
+        return $this->directoryHelperData->getCountriesWithOptionalZip(true);
     }
 
     /**
