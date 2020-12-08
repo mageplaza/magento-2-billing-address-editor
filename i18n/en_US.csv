@@ -1,0 +1,17 @@
+"Order Billing Address","Order Billing Address"
+"Changing address information will not recalculate shipping, tax or other order amount.","Changing address information will not recalculate shipping, tax or other order amount."
+"You updated the order address.","You updated the order address."
+"We can't update the order address right now.%1","We can't update the order address right now.%1"
+"Invalid order","Invalid order"
+"* Required Fields","* Required Fields"
+"Street Address %1","Street Address %1"
+"Please select a region, state or province.","Please select a region, state or province."
+City,City
+"Save Billing Address","Save Billing Address"
+"Go back","Go back"
+Edit,Edit
+"Edit Billing Address","Edit Billing Address"
+"Edit Order Billing Address","Edit Order Billing Address"
+General,General
+Enable,Enable
+"Select <b>Yes</b> to enable this module.","Select <b>Yes</b> to enable this module."

@@ -1,0 +1,43 @@
+<?php
+/**
+ * Mageplaza
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Mageplaza.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.mageplaza.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Mageplaza
+ * @package     Mageplaza_EditOrderBillingAddress
+ * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
+ * @license     https://www.mageplaza.com/LICENSE.txt
+ */
+
+/** @var $block \Mageplaza\EditOrderBillingAddress\Block\Order\Address\Link */
+
+$url = $block->escapeUrl($block->getEditBillingAddressUrl());
+$editLink = '<a href="' . $url . '">' . __('Edit') . '</a>';
+$editBillingLink = '<a href="' . $url . '">' . __('Edit Billing Address') . '</a>';
+?>
+
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+        $(document).ready(function(){
+            var billingAddressElement = $('.block-order-details-view .box-order-billing-address .box-title');
+
+            if (billingAddressElement.length > 0) {
+                billingAddressElement.append('<?= /* @noEscape */ $editLink?>')
+            } else {
+                $('.block-order-details-view>div.block-title').append('<?= /* @noEscape */ $editBillingLink?>')
+            }
+        });
+    });
+</script>
