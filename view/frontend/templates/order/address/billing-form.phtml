@@ -14,16 +14,16 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_Customize
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
-/** @var \Mageplaza\EditOrderBillingAddress\Block\Order\Address\Billing $block */
+/** @var \Mageplaza\BillingAddressEditor\Block\Order\Address\Billing $block */
 ?>
-<?php $_company = $block->getCompanyWidget() ?>
-<?php $_telephone = $block->getTelephoneWidget() ?>
-<?php $_fax = $block->getFaxWidget() ?>
+<?php $company = $block->getCompanyWidget() ?>
+<?php $telephone = $block->getTelephoneWidget() ?>
+<?php $fax = $block->getFaxWidget() ?>
 <form class="form-address-edit"
       action="<?= $block->escapeUrl($block->getSaveUrl()) ?>"
       method="post"
@@ -48,16 +48,16 @@
                        class="input-text <?= $block->escapeHtmlAttr($_streetValidationClass) ?>"/>
                 <div class="nested">
                     <?php $_streetValidationClass = trim(str_replace('required-entry', '', $_streetValidationClass)); ?>
-                    <?php for ($_i = 1, $_n = $block->getHelperAddress()->getStreetLines(); $_i < $_n; $_i++): ?>
+                    <?php for ($i = 1, $n = $block->getHelperAddress()->getStreetLines(); $i < $n; $i++): ?>
                         <div class="field additional">
-                            <label class="label" for="street_<?= /* @noEscape */ $_i + 1 ?>">
-                                <span><?= $block->escapeHtml(__('Street Address %1', $_i + 1)) ?></span>
+                            <label class="label" for="street_<?= /* @noEscape */ $i + 1 ?>">
+                                <span><?= $block->escapeHtml(__('Street Address %1', $i + 1)) ?></span>
                             </label>
                             <div class="control">
                                 <input type="text" name="street[]"
-                                       value="<?= $block->escapeHtmlAttr($block->getStreetLine($_i + 1)) ?>"
-                                       title="<?= $block->escapeHtmlAttr(__('Street Address %1', $_i + 1)) ?>"
-                                       id="street_<?= /* @noEscape */ $_i + 1 ?>"
+                                       value="<?= $block->escapeHtmlAttr($block->getStreetLine($i + 1)) ?>"
+                                       title="<?= $block->escapeHtmlAttr(__('Street Address %1', $i + 1)) ?>"
+                                       id="street_<?= /* @noEscape */ $i + 1 ?>"
                                        class="input-text <?= $block->escapeHtmlAttr($_streetValidationClass) ?>">
                             </div>
                         </div>
@@ -126,9 +126,13 @@
                        ) ?>">
             </div>
         </div>
-
-            <?= $_company->setCompany($block->getAddress()->getCompany())->toHtml() ?>
-            <?= $_telephone->setTelephone($block->getAddress()->getTelephone())->toHtml() ?>
+        <?php if ($company->isEnabled()): ?>
+            <?= $company->setCompany($block->getAddress()->getCompany())->toHtml() ?>
+        <?php endif ?>
+        <?php if ($telephone->isEnabled()): ?>
+            <?= $telephone->setTelephone($block->getAddress()->getTelephone())->toHtml() ?>
+        <?php endif ?>
+        <?php if ($block->getHelperAddress()->isVatAttributeVisible()): ?>
             <div class="field taxvat">
                 <label class="label" for="vat_id">
                     <span><?= /* @noEscape */ $block->getAttributeData()->getFrontendLabel('vat_id') ?></span>
@@ -138,14 +142,16 @@
                            name="vat_id"
                            value="<?= $block->escapeHtmlAttr($block->getAddress()->getVatId()) ?>"
                            title="<?= /* @noEscape */ $block->getAttributeData()->getFrontendLabel('vat_id') ?>"
-                           class="input-text <?= $block->escapeHtmlAttr(
+                           class="input-text
+                           <?= $block->escapeHtmlAttr(
                                $block->getHelperAddress()->getAttributeValidationClass('vat_id')
                            ) ?>"
                            id="vat_id">
                 </div>
             </div>
-        <?php if ($_fax->isEnabled()): ?>
-            <?= $_fax->setFax($block->getAddress()->getFax())->toHtml() ?>
+        <?php endif; ?>
+        <?php if ($fax->isEnabled()): ?>
+            <?= $fax->setFax($block->getAddress()->getFax())->toHtml() ?>
         <?php endif ?>
 
         <div class="actions-toolbar">

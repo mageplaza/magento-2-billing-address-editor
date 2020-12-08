@@ -15,17 +15,17 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="mp_edit_order_billing_address" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Edit Order Billing Address</label>
+        <section id="mp_billing_address_editor" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Billing Address Editor</label>
             <tab>mageplaza</tab>
-            <resource>Mageplaza_EditOrderBillingAddress::configuration</resource>
+            <resource>Mageplaza_BillingAddressEditor::configuration</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">

@@ -15,7 +15,7 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
@@ -23,7 +23,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-                <block class="Mageplaza\EditOrderBillingAddress\Block\Order\Address\Link" name="mp_edit_billing_address" template="Mageplaza_EditOrderBillingAddress::order/address/link.phtml"/>
+                <block class="Mageplaza\BillingAddressEditor\Block\Order\Address\Link" name="mp_edit_billing_address" template="Mageplaza_BillingAddressEditor::order/address/link.phtml"/>
         </referenceContainer>
     </body>
 </page>

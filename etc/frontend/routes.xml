@@ -15,18 +15,15 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="mageplaza" frontName="mageplaza">
-            <module name="Mageplaza_EditOrderBillingAddress"/>
-        </route>
         <route id="sales">
-            <module name="Mageplaza_EditOrderBillingAddress"/>
+            <module name="Mageplaza_BillingAddressEditor"/>
         </route>
     </router>
 </config>

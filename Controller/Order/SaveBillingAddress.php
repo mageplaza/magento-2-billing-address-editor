@@ -14,11 +14,11 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-namespace Mageplaza\EditOrderBillingAddress\Controller\Order;
+namespace Mageplaza\BillingAddressEditor\Controller\Order;
 
 use Exception;
 use Magento\Directory\Model\RegionFactory;
@@ -32,11 +32,11 @@ use Magento\Sales\Api\Data\OrderAddressInterface;
 use Magento\Sales\Controller\AbstractController\OrderViewAuthorizationInterface;
 use Magento\Sales\Model\Order\Address as AddressModel;
 use Magento\Sales\Model\OrderFactory;
-use Mageplaza\EditOrderBillingAddress\Helper\Data;
+use Mageplaza\BillingAddressEditor\Helper\Data;
 
 /**
  * Class SaveBillingAddress
- * @package Mageplaza\EditOrderBillingAddress\Controller\Order\Address
+ * @package Mageplaza\BillingAddressEditor\Controller\Order\Address
  */
 class SaveBillingAddress extends Action\Action
 {

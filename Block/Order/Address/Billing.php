@@ -14,11 +14,11 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-namespace Mageplaza\EditOrderBillingAddress\Block\Order\Address;
+namespace Mageplaza\BillingAddressEditor\Block\Order\Address;
 
 use Magento\Customer\Api\Data\AddressInterface;
 use Magento\Customer\Block\Widget\Company;

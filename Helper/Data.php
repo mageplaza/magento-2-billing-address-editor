@@ -14,18 +14,18 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
 
-namespace Mageplaza\EditOrderBillingAddress\Helper;
+namespace Mageplaza\BillingAddressEditor\Helper;
 
 use Mageplaza\Core\Helper\AbstractData;
 
 /**
  * Class Data
- * @package Mageplaza\EditOrderBillingAddress\Helper
+ * @package Mageplaza\BillingAddressEditor\Helper
  */
 class Data extends AbstractData
 {

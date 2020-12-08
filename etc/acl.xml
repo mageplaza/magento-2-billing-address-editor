@@ -15,7 +15,7 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
@@ -27,7 +27,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Mageplaza_EditOrderBillingAddress::configuration" title="Mageplaza Edit Order Billing Address"/>
+                            <resource id="Mageplaza_BillingAddressEditor::configuration" title="Mageplaza Billing Address Editor"/>
                         </resource>
                     </resource>
                 </resource>

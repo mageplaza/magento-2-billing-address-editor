@@ -14,11 +14,11 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-namespace Mageplaza\EditOrderBillingAddress\Controller\Order;
+namespace Mageplaza\BillingAddressEditor\Controller\Order;
 
 use Magento\Framework\App\Action;
 use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
@@ -28,11 +28,11 @@ use Magento\Framework\View\Result\PageFactory;
 use Magento\Sales\Controller\AbstractController\OrderLoaderInterface;
 use Magento\Sales\Controller\AbstractController\View;
 use Magento\Sales\Controller\OrderInterface;
-use Mageplaza\EditOrderBillingAddress\Helper\Data;
+use Mageplaza\BillingAddressEditor\Helper\Data;
 
 /**
  * Class Billing
- * @package Mageplaza\EditOrderBillingAddress\Controller\Order\Address
+ * @package Mageplaza\BillingAddressEditor\Controller\Order\Address
  */
 class BillingAddress extends View implements OrderInterface, HttpGetActionInterface
 {

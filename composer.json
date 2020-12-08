@@ -1,6 +1,6 @@
 {
-  "name": "mageplaza/module-edit-order-billing-address",
-  "description": "Magento 2 Edit Order Billing Address",
+  "name": "mageplaza/module-billing-address-editor",
+  "description": "Magento 2 Billing Address Editor",
   "require": {
     "mageplaza/module-core": "^1.4.5"
   },
@@ -20,7 +20,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "Mageplaza\\EditOrderBillingAddress\\": ""
+      "Mageplaza\\BillingAddressEditor\\": ""
     }
   }
 }

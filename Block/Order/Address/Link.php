@@ -14,21 +14,21 @@
  * version in the future.
  *
  * @category    Mageplaza
- * @package     Mageplaza_EditOrderBillingAddress
+ * @package     Mageplaza_BillingAddressEditor
  * @copyright   Copyright (c) Mageplaza (https://www.mageplaza.com/)
  * @license     https://www.mageplaza.com/LICENSE.txt
  */
-namespace Mageplaza\EditOrderBillingAddress\Block\Order\Address;
+namespace Mageplaza\BillingAddressEditor\Block\Order\Address;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context as TemplateContext;
 use Magento\Framework\Registry;
 use Magento\Sales\Model\Order;
-use Mageplaza\EditOrderBillingAddress\Helper\Data;
+use Mageplaza\BillingAddressEditor\Helper\Data;
 
 /**
  * Class Link
- * @package Mageplaza\EditOrderBillingAddress\Block\Order\Address
+ * @package Mageplaza\BillingAddressEditor\Block\Order\Address
  */
 class Link extends Template
 {
