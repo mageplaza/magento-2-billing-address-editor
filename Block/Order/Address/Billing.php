@@ -219,7 +219,7 @@ class Billing extends Data
     public function getSaveUrl()
     {
         return $this->_urlBuilder->getUrl(
-            'mageplaza/order/saveBillingAddress',
+            'sales/order/saveBillingAddress',
             [
                 '_secure' => true,
                 'order_id' => $this->getRequest()->getParam('order_id'),
