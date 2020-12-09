@@ -29,5 +29,5 @@ use Mageplaza\Core\Helper\AbstractData;
  */
 class Data extends AbstractData
 {
-    const CONFIG_MODULE_PATH = 'mp_edit_order_billing_address';
+    const CONFIG_MODULE_PATH = 'mp_billing_address_editor';
 }
